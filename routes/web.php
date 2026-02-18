@@ -20,6 +20,25 @@ Route::get('/', function () {
 
 Route::get('/blog', [PostController::class, 'index'])->name('blog.index');
 
+// Contact page routes
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
+
+Route::post('/contact', function (Illuminate\Http\Request $request) {
+    $validated = $request->validate([
+        'name' => 'required|string|max:255',
+        'email' => 'required|email|max:255',
+        'subject' => 'required|string|max:255',
+        'message' => 'required|string|max:2000',
+    ]);
+    
+    // In a real application, you would send an email here or save to database
+    // For now, we'll just return with a success message
+    
+    return redirect()->route('contact')->with('success', 'Thank you for your message! We will get back to you soon.');
+})->name('contact.submit');
+
 // Blog routes
 Route::resource('posts', PostController::class);
 
