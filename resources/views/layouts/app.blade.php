@@ -90,50 +90,50 @@
         </main>
 
         <!-- Footer -->
-        <footer class="bg-dark text-white mt-auto">
+        <footer class="footer-professional mt-auto">
             <div class="container py-5">
                 <div class="row">
                     <div class="col-md-4 mb-4 mb-md-0">
                         <h5 class="fw-bold mb-3">{{ config('app.name', 'Laravel Blog') }}</h5>
-                        <p class="text-muted">A modern blogging platform built with Laravel. Share your coding journey, tutorials, and experiences with the developer community.</p>
+                        <p class="footer-text">A modern blogging platform built with Laravel. Share your coding journey, tutorials, and experiences with the developer community.</p>
                     </div>
                     <div class="col-md-2 mb-4 mb-md-0">
                         <h6 class="fw-bold mb-3">Quick Links</h6>
                         <ul class="list-unstyled">
-                            <li class="mb-2"><a href="{{ route('home') }}" class="text-muted text-decoration-none">Home</a></li>
-                            <li class="mb-2"><a href="{{ route('blog.index') }}" class="text-muted text-decoration-none">Blog</a></li>
-                            <li class="mb-2"><a href="{{ route('about') }}" class="text-muted text-decoration-none">About</a></li>
-                            <li class="mb-2"><a href="{{ route('contact') }}" class="text-muted text-decoration-none">Contact</a></li>
+                            <li class="mb-2"><a href="{{ route('home') }}" class="footer-link">Home</a></li>
+                            <li class="mb-2"><a href="{{ route('blog.index') }}" class="footer-link">Blog</a></li>
+                            <li class="mb-2"><a href="{{ route('about') }}" class="footer-link">About</a></li>
+                            <li class="mb-2"><a href="{{ route('contact') }}" class="footer-link">Contact</a></li>
                             @auth
-                                <li class="mb-2"><a href="{{ route('posts.create') }}" class="text-muted text-decoration-none">Write Post</a></li>
+                                <li class="mb-2"><a href="{{ route('posts.create') }}" class="footer-link">Write Post</a></li>
                             @endauth
                         </ul>
                     </div>
                     <div class="col-md-3 mb-4 mb-md-0">
                         <h6 class="fw-bold mb-3">Resources</h6>
                         <ul class="list-unstyled">
-                            <li class="mb-2"><a href="https://laravel.com/docs" target="_blank" class="text-muted text-decoration-none">Documentation</a></li>
-                            <li class="mb-2"><a href="https://github.com" target="_blank" class="text-muted text-decoration-none">GitHub</a></li>
-                            <li class="mb-2"><a href="https://laracasts.com" target="_blank" class="text-muted text-decoration-none">Laracasts</a></li>
+                            <li class="mb-2"><a href="https://laravel.com/docs" target="_blank" class="footer-link">Documentation</a></li>
+                            <li class="mb-2"><a href="https://github.com" target="_blank" class="footer-link">GitHub</a></li>
+                            <li class="mb-2"><a href="https://laracasts.com" target="_blank" class="footer-link">Laracasts</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3">
                         <h6 class="fw-bold mb-3">Connect</h6>
                         <div class="d-flex gap-3">
-                            <a href="#" class="text-muted"><i class="bi bi-twitter fs-4"></i></a>
-                            <a href="#" class="text-muted"><i class="bi bi-github fs-4"></i></a>
-                            <a href="#" class="text-muted"><i class="bi bi-linkedin fs-4"></i></a>
-                            <a href="#" class="text-muted"><i class="bi bi-envelope fs-4"></i></a>
+                            <a href="#" class="footer-social-link"><i class="bi bi-twitter fs-4"></i></a>
+                            <a href="#" class="footer-social-link"><i class="bi bi-github fs-4"></i></a>
+                            <a href="#" class="footer-social-link"><i class="bi bi-linkedin fs-4"></i></a>
+                            <a href="#" class="footer-social-link"><i class="bi bi-envelope fs-4"></i></a>
                         </div>
                     </div>
                 </div>
-                <hr class="my-4 border-secondary">
+                <hr class="my-4 footer-divider">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
-                        <p class="text-muted mb-0">&copy; {{ date('Y') }} {{ config('app.name', 'Laravel Blog') }}. All rights reserved.</p>
+                        <p class="footer-text mb-0">&copy; {{ date('Y') }} {{ config('app.name', 'Laravel Blog') }}. All rights reserved.</p>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
-                        <p class="text-muted mb-0">Built with <i class="bi bi-heart-fill text-danger"></i> using Laravel</p>
+                        <p class="footer-text mb-0">Built with <i class="bi bi-heart-fill text-danger"></i> using Laravel</p>
                     </div>
                 </div>
             </div>

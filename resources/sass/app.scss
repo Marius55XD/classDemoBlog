@@ -183,12 +183,49 @@ a:hover {
 	box-shadow: var(--shadow-soft);
 }
 
-footer {
-	background: linear-gradient(180deg, #1f2937 0%, #0f172a 100%);
-}
-
-footer a.text-muted:hover {
-	color: #e5e7eb;
+// Professional Footer
+.footer-professional {
+	background: linear-gradient(180deg, #1f2937 0%, #111827 100%);
+	color: #ffffff;
+	border-top: 3px solid var(--accent-600);
+	
+	h5, h6 {
+		color: #ffffff;
+		font-weight: 700;
+	}
+	
+	.footer-text {
+		color: #d1d5db;
+		font-size: 0.95rem;
+		line-height: 1.6;
+	}
+	
+	.footer-link {
+		color: #d1d5db;
+		text-decoration: none;
+		transition: all 0.3s ease;
+		font-weight: 500;
+		
+		&:hover {
+			color: var(--accent-600);
+			padding-left: 4px;
+		}
+	}
+	
+	.footer-social-link {
+		color: #9ca3af;
+		transition: all 0.3s ease;
+		
+		&:hover {
+			color: var(--accent-600);
+			transform: translateY(-3px);
+		}
+	}
+	
+	.footer-divider {
+		border-color: rgba(255, 255, 255, 0.1);
+		opacity: 1;
+	}
 }
 
 @keyframes fadeUp {
