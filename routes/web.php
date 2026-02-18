@@ -20,6 +20,11 @@ Route::get('/', function () {
 
 Route::get('/blog', [PostController::class, 'index'])->name('blog.index');
 
+// About page route
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
 // Contact page routes
 Route::get('/contact', function () {
     return view('contact');
