@@ -63,22 +63,21 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                            <li class="nav-item">
+                                <span class="nav-link fw-semibold">{{ Auth::user()->name }}</span>
+                            </li>
+                            <li class="nav-item ms-2">
+                                <a class="btn btn-outline-secondary" href="{{ route('profile') }}">
+                                    <i class="bi bi-person-circle me-2"></i>{{ __('Profile') }}
                                 </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
+                            </li>
+                            <li class="nav-item ms-2">
+                                <form action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                    <button type="submit" class="btn btn-outline-secondary">
+                                        <i class="bi bi-box-arrow-right me-2"></i>{{ __('Logout') }}
+                                    </button>
+                                </form>
                             </li>
                         @endguest
                     </ul>
